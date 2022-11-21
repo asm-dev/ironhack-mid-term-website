@@ -40,7 +40,7 @@ h1 {
 }
 
 .nav-bar-logo, footer-logo{
-    width: 25vw;
+    width: 20vw;
 }
 
 .nav-bar-links li, .footer li {
@@ -161,6 +161,7 @@ h1 {
     align-items: center;
     justify-content: center;
     gap: 2em;
+    padding-bottom: 1.5em;
 }
 
 #projects-section h2, #services-section h2 {
@@ -216,4 +217,124 @@ h1 {
 
 #testimonial-section q{
     color: #FFC600;
+}
+
+
+/* TABLET/DESKTOP SETTINGS*/
+
+@media only screen and (min-width: 768px) {
+
+    body {
+        font-size: 17px;
+    }
+
+    h1 {
+        font-size: 60px;
+        font-weight: bold;
+        color: #292E47;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 40px;
+        color: #292E47;
+        font-weight: bold;
+        padding-bottom: 1em;
+    }
+
+    .section {
+        padding: 4.5em 1em;
+    }
+
+    .nav-bar {
+        height: 5rem;
+        align-items: flex-end;
+    }
+    .nav-bar ul {
+        display: flex;
+        margin: 0;
+    }
+
+    .nav-bar li {
+        display: inline;
+        padding: 0 3em;
+    }
+
+    .nav-bar-logo, footer-logo{
+        width: 5em;
+    }
+
+    .blue-button {
+        padding: 0.8em 1.5em
+    }
+
+    #hero-section p {
+        font-size: 20px;
+    }
+
+    #hero-section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #hero-section article {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .hero-card {
+        display: block;
+        min-width:15vw;
+        max-width: 20vw;
+        height: fit-content;
+    }
+
+    .hero-section-img-container {
+        width: 50%;
+        height: 40vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        overflow: hidden;
+    }
+
+    #first-hero-card {
+        align-self: flex-start;
+    }
+
+    #second-hero-card {
+        align-self: flex-end;
+    }
+
+    .hero-links {
+        justify-content: flex-start;
+    }
+
+    #client-section{
+        justify-content: space-between;
+    }
+
+    .project-img {
+        display: block;
+        width: 100%;
+        /* height: 55%; */
+        align-self: flex-start;
+        margin: 0;
+    }
+
+    .project-card {
+        width: 30%;
+        padding: 0;
+        align-items: flex-start;
+    }
+
+    #projects-section {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: none;
+    }
 }
