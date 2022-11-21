@@ -8,12 +8,12 @@ class Navbar extends HTMLElement {
         <img class="nav-bar-logo" src="../images/logos/circle.svg" alt="Circle logo">
         <nav class="nav-bar-links">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Projects</a></li>
+            <li><a href="../html/index.html">Home</a></li>
+            <li><a href="../html/project.html">Projects</a></li>
             <li><a href="#">Services</a></li>
           </ul>
         </nav>
-        <a class="blue-button" id="nav-bar-contact" href="./html/contact.">Contact us</a>
+        <a class="blue-button" id="nav-bar-contact" href="../html/contact.">Contact us</a>
       </header>`
     }
 }
