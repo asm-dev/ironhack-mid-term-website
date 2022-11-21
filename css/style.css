@@ -20,7 +20,7 @@ a {
 }
 
 .main-header, .main-main, footer {
-    padding: 0 1em;
+    margin: 0 0.5em;
 }
 
 h1 {
@@ -55,10 +55,18 @@ h1 {
     font-weight: 600;
 }
 
+/* CTA styles */
+
+#CTA-section {
+    background-color: #FFC600;
+    color: #292E47
+}
+
+
 /* MAIN PAGE STYLES */
 
 .section {
-    padding: 1.5em 0;
+    padding: 1.5em 1em;
 }
 
 /* Hero section styles */
@@ -162,3 +170,11 @@ h1 {
     align-items: center;
 }
 
+#testimonial-section {
+    background-color: #292E47;
+    color: white;
+}
+
+#testimonial-section q{
+    color: #FFC600;
+}

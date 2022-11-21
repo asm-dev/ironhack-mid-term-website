@@ -52,7 +52,7 @@ class CTASection extends HTMLElement {
   }
 
   connectedCallback() {
-      this.innerHTML = `<section class="cta-section">
+      this.innerHTML = `<section class="section" id="CTA-section">
         <h2>Do you have any questions?</h2>
         <p>Let us help you!</p>
         <form>
