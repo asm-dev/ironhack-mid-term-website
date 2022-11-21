@@ -91,15 +91,11 @@ h1 {
     margin: 0.5em
 }
 
-#CTA-section input[type="text"] {
+#CTA-section input[type="submit"], #CTA-section input[type="text"] {
     border: none;
     padding: 1em;
 }
 
-#CTA-section input[type="submit"] {
-    border: none;
-    padding: 1em;
-}
 /* MAIN PAGE STYLES */
 
 .section {
@@ -242,8 +238,16 @@ h1 {
         padding-bottom: 1em;
     }
 
+    .main-header > .section, .main-main, .nav-bar, .footer {
+        margin: 0 3em;
+    }
+
+    .nav-bar, .footer {
+        padding: 0 5em;
+    }
+
     .section {
-        padding: 4.5em 1em;
+        padding: 4.5em 5em;
     }
 
     .nav-bar {
@@ -332,9 +336,119 @@ h1 {
         align-items: flex-start;
     }
 
-    #projects-section {
+    .service-card p {
+        display: inline;
+    }
+
+    .project-card, .service-card {
+        padding: 1em;
+        align-items: flex-start;
+        min-height: 300px;
+        font-size: 20px;
+    }
+
+    #projects-section,  #services-section {
         flex-direction: row;
         justify-content: space-between;
         gap: none;
+    }
+
+    .testimonial-emojis img:first-child {
+        display: block;
+    }
+    
+    .quote-sm-profile img {
+        display: block;
+        clip-path: circle();
+        width: 15%;
+    }
+
+    #testimonial-section h2{
+        color: white;  
+        padding: 0;     
+    }
+
+    .testimonial-emojis {
+        width: 15%;
+        justify-content: space-between;
+    }
+
+    .testimonials-text {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3em;
+        text-align: center;
+    }
+
+    .quote-sm-profile {
+        align-items: center;
+    }
+
+    #testimonial-section q{
+        font-size: 24px;
+    }
+
+    #testimonial-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 3em;
+        height: 50vh;
+    }
+
+    .testimonial-emojis img {
+        width: 13em;
+    }
+
+    #CTA-section input[type="submit"], #CTA-section input[type="text"] {
+        border: none;
+        margin: 2em auto;
+    }
+
+    #CTA-section input[type="text"] {
+        padding: 1.5em 1em;
+        width: 20em;
+    }
+
+    #CTA-section input[type="submit"] {
+        align-items: center;
+        padding: 1.5em 2em;
+    }
+
+    #CTA-section h2 {
+        margin: 0;
+        padding: 0;
+    }
+
+    #CTA-section {
+        justify-content: space-between;
+    }
+
+    .footer {
+        flex-direction: row;
+    }
+
+    .footer div:first-child{
+        width: 25%;
+    }
+
+    .footer nav {
+        width: 40%;
+    }
+
+    .footer ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 3em;
+        justify-content: space-between;
+    }
+
+    .footer li{
+        display: inline;
     }
 }
