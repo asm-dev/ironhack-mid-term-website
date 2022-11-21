@@ -1,0 +1,67 @@
+/* Across site/General styles */
+
+body {
+    margin: 0;
+    background-color: #F4F6FC;
+    color: #6B708D;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #6B708D;
+}
+
+.blue-button {
+    background-color: #072AC8;
+    color: white;
+    padding: 8px 12px;
+}
+
+.main-header, .main-main, footer {
+    padding: 0.5em;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+/* Nav bar styles */
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-bar-logo{
+    width: 25vw;
+}
+
+.nav-bar-links li {
+    list-style: none;
+}
+
+.nav-bar-links a:active {
+    color: #072AC8;
+}
+
+.nav-bar-links a:hover {
+    font-weight: 600;
+}
+
+.hero-section-img-container {
+    background-image: url('../images/hero-section/hero-image.png');
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.hero-card {
+    display:none;
+}
+
+.hero-links {
+    padding-top: 1em;
+}
