@@ -1,11 +1,11 @@
-/* Across site/General styles */
+/* ACCROSS SITE/GENERAL STYLES */
 
 body {
     margin: 0;
     background-color: #F4F6FC;
     color: #6B708D;
     font-family: Roboto, Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 a {
@@ -20,11 +20,11 @@ a {
 }
 
 .main-header, .main-main, footer {
-    padding: 0.5em;
+    padding: 0 1em;
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 1.8em;
 }
 
 /* Nav bar styles */
@@ -50,12 +50,21 @@ h1 {
     font-weight: 600;
 }
 
+/* MAIN PAGE STYLES */
+
+.section {
+    padding: 1.5em 0;
+}
+
+/* Hero section styles */
+
 .hero-section-img-container {
     background-image: url('../images/hero-section/hero-image.png');
     height: 30vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    padding-top: 3em;
 }
 
 .hero-card {
@@ -63,5 +72,60 @@ h1 {
 }
 
 .hero-links {
-    padding-top: 1em;
+    padding: 1em 0 1em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+/* Client section styles */
+
+.client-logo {
+    filter: grayscale(100%);
+}
+
+#client-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+/* Projects section*/
+
+.project-img {
+    display: none;
+}
+
+#projects-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+#projects-section h2 {
+    align-self: flex-start;
+}
+
+.project-card {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.project-card a {
+    color: #072AC8;
+}
+
+.project-card > * {
+    margin: 0.5em;
 }
