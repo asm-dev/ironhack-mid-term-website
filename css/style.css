@@ -34,6 +34,11 @@ h1 {
     justify-content: space-between;
     align-items: center;
 }
+
+.nav-bar ul{
+    padding: 0;
+}
+
 .nav-bar-logo{
     width: 25vw;
 }
@@ -93,13 +98,17 @@ h1 {
     gap: 1em;
 }
 
-/* Projects section*/
+/* Projects & services sections*/
 
 .project-img {
     display: none;
 }
 
-#projects-section {
+.service-card p {
+    display: none;
+}
+
+#projects-section, #services-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -107,11 +116,11 @@ h1 {
     gap: 2em;
 }
 
-#projects-section h2 {
+#projects-section h2, #services-section h2 {
     align-self: flex-start;
 }
 
-.project-card {
+.project-card, .service-card {
     background-color: white;
     width: 100%;
     display: flex;
@@ -122,10 +131,34 @@ h1 {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.project-card a {
+.project-card a, .service-card a {
     color: #072AC8;
 }
 
-.project-card > * {
+.project-card > *, .service-card > * {
     margin: 0.5em;
 }
+
+/* Testimonials section */
+
+.testimonial-emojis img:first-child {
+    display: none;
+}
+
+.quote-sm-profile img {
+    display: none;
+}
+
+.quote-sm-profile {
+    padding-top: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.testimonial-emojis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
