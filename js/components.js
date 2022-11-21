@@ -26,9 +26,11 @@ class Footer extends HTMLElement {
   }
 
   connectedCallback() {
-      this.innerHTML = `<footer>
-      <img class="footer-logo" src="../images/logos/circle.svg" alt="Circle logo">
-      <address>2972 Westheimer Rd. Santa Ana, Illinois 85486</address>
+      this.innerHTML = `<footer class="footer">
+      <div>
+        <img class="footer-logo" src="../images/logos/circle.svg" alt="Circle logo">
+        <address>2972 Westheimer Rd. Santa Ana, Illinois 85486</address>
+      </div>
       <nav>
         <ul>
           <li><a href="#">Team</a></li>
@@ -57,7 +59,7 @@ class CTASection extends HTMLElement {
         <p>Let us help you!</p>
         <form>
           <input type="text" placeholder="&#9993; Enter your email" name="email" id="mail">
-          <input type="submit" value="Suscribe">
+          <input type="submit" value="Suscribe" class="blue-button">
         </form>
       </section>`
   }
