@@ -236,6 +236,10 @@ h1 {
         padding-bottom: 1em;
     }
 
+    h3 {
+        font-size: 24px;
+    }
+
     .main-header > .section, .main-main, .nav-bar, .footer {
         margin: 0 3em;
     }
@@ -260,6 +264,11 @@ h1 {
     .nav-bar li {
         display: inline;
         padding: 0.8em 3em;
+        font-weight: bold;
+    }
+
+    .nav-bar li a:hover {
+        color: #072AC8;
     }
 
     .nav-bar-logo {
@@ -336,21 +345,25 @@ h1 {
 
     .service-card p {
         display: inline;
+        font-size: 20px;
     }
 
     #projects-section,  #services-section {
         flex-direction: row;
         justify-content: space-between;
-        gap: none;
+        height: 30vw;
     }
 
     .project-card, .service-card {
-        height: 350px;
+        height: -webkit-fill-available;
         padding: 0;
         margin: 0;
-        font-size: 20px;
         align-items: flex-start;
         justify-content: space-between;
+    }
+
+    .service-card {
+        padding: 1em;
     }
 
     .card-img {
@@ -360,6 +373,18 @@ h1 {
         margin: 0;
         background-position: center;
         background-size: cover;
+    }
+
+    .project-card > *:not(:first-child) {
+        padding: 1em;
+    }
+
+    .project-card > div:not(:first-child) > * {
+        margin: 0;
+    }
+
+    .project-card > div:not(:first-child) > p {
+        margin-top: 1em;
     }
 
     #first-project-card {
@@ -417,7 +442,9 @@ h1 {
         flex-direction: row;
         justify-content: space-between;
         padding: 3em;
-        height: 50vh;
+        height: 70vh;
+        background-image: url('../images/testimonial-section/orbit.png');
+        background-size: cover;
     }
 
     .testimonial-emojis img {
@@ -452,6 +479,8 @@ h1 {
 
     #CTA-section {
         justify-content: space-between;
+        margin: 2em 0 5em 0;
+        height: 15vw;
     }
 
     .footer {
