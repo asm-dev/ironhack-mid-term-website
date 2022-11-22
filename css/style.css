@@ -17,9 +17,10 @@ a {
     background-color: #072AC8;
     color: white;
     padding: 8px 12px;
+    border: none;
 }
 
-.main-header > .section, .main-main, .nav-bar, .footer, .project-main {
+.main-header > .section, .main-main, .nav-bar, .footer, .project-main, .contact-main {
     margin: 0 0.5em;
 }
 
@@ -230,6 +231,35 @@ h1 {
     padding-bottom: 1em;
 }
 
+#contact-form {
+    padding: 2em 0 5em 0; 
+}
+    
+#contact-form label {
+    display: block;
+}
+
+#contact-form input, textarea {
+    width: 100%;
+    height: 3em;
+    margin: 1em 0 2.5em 0;
+    font-size: inherit;
+}
+
+#contact-form input:not([type="submit"]), textarea {
+    border: none;
+    background-color: #E6E9F1;
+    padding: 0 0.5em;
+}
+
+#contact-form textarea{
+    resize: none;
+    font-family: inherit;
+    font-size: inherit;
+    height: 10em;
+    padding-top: 0.5em;
+}
+
 
 /* TABLET/DESKTOP SETTINGS*/
 
@@ -257,7 +287,7 @@ h1 {
         font-size: 24px;
     }
 
-    .main-header > .section, .main-main, .nav-bar, .footer, .project-main {
+    .main-header > .section, .main-main, .nav-bar, .footer, .project-main, .contact-main {
         margin: 0 3em;
     }
 
@@ -558,5 +588,28 @@ h1 {
         padding: 1em 0 4em 0;
         display: flex;
         justify-content: space-between;
+    }
+
+    #contact-form > div:not(.message-div) {
+        width: 45%;
+    }
+
+    .message-div {
+        width: -webkit-fill-available;
+    }
+ 
+    #contact-form input[type="number"] {
+        width: -webkit-fill-available;
+    }
+
+    #contact-form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1em;
+    }
+
+    #contact-form textarea {
+        width: -webkit-fill-available;
     }
 }

@@ -13,7 +13,7 @@ class Navbar extends HTMLElement {
             <li><a href="#">Services</a></li>
           </ul>
         </nav>
-        <a class="blue-button" id="nav-bar-contact" href="../html/contact.">Contact us</a>
+        <a class="blue-button" id="nav-bar-contact" href="../html/contact.html">Contact us</a>
       </header>`
     }
 }
