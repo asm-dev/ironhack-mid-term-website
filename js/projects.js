@@ -1,7 +1,7 @@
 const projectSection = document.querySelector('.project-section')
 const projectsSection = document.querySelector('.projects-section')
 
-function makeProjectCard (project) {
+function makeProjectCard(project) {
     let projectCard = document.createElement("div");
     projectCard.classList.add("project-card")
     projectCard.innerHTML = `
@@ -10,13 +10,13 @@ function makeProjectCard (project) {
             <h3>${project.name}</h3>
             <p>${project.description}</p>
         </div>
-        <a href="#">Learn more</a>`
+        <a href="../html/project.html?project=${project.uuid}">Learn more</a>`
     let projectImage = projectCard.querySelector(".card-img")
     projectImage.style.backgroundImage = "url('"+project.image+"')"
     projectsSection.appendChild(projectCard)
 }
 
-function makeMainProject (mainProject) {
+function makeMainProject(mainProject) {
     let projectDetails = document.createElement("div");
     projectDetails.innerHTML = `
         <h1>${mainProject.name}</h1>
@@ -33,20 +33,42 @@ function makeMainProject (mainProject) {
     projectSection.appendChild(projectDetails)
 }
 
+function getQueryProject() {
+    let get = new URLSearchParams(window.location.search).get("project",10);
+    return get === null ? 0 : parseInt(get);
+}
+
 window.addEventListener("load", () => {
     fetch('https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects')
     .then((response) => response.json())
     .then((data) => {
+        
         //Projects page
         if (projectSection !== null) {
-            const randomUuid = Math.floor(Math.random() * data.length+1);
-            const mainProject = data.filter(project => parseInt(project.uuid) === randomUuid)[0];
-            makeMainProject(mainProject)
-            const remainingProjectsArr = data.filter(project => parseInt(project.uuid) !== randomUuid)
-            remainingProjectsArr.reverse().forEach((project) => {
-                makeProjectCard (project)
-            });
- 
+
+            const queryId = getQueryProject()
+
+            if (queryId === 0) {
+                
+                const randomUuid = Math.floor(Math.random() * data.length+1);
+                const mainProject = data.filter(project => parseInt(project.uuid) === randomUuid)[0];
+                makeMainProject(mainProject)
+                const remainingProjectsArr = data.filter(project => parseInt(project.uuid) !== randomUuid)
+                remainingProjectsArr.reverse().forEach((project) => {
+                    makeProjectCard (project)
+                });
+
+            } else {
+
+                const uuid = queryId;
+                const mainProject = data.filter(project => parseInt(project.uuid) === uuid)[0];
+                makeMainProject(mainProject)
+                const remainingProjectsArr = data.filter(project => parseInt(project.uuid) !== uuid)
+                remainingProjectsArr.reverse().forEach((project) => {
+                    makeProjectCard (project)
+                });
+            };
+            
         // Homepage projects section
         } else {
             for (i=3; i>0; i--) {
@@ -54,7 +76,6 @@ window.addEventListener("load", () => {
                 makeProjectCard (project)
             }
         }
-        
     })
     .catch(console.error);
 })
