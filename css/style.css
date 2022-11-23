@@ -267,7 +267,7 @@ h1 {
 
 /* TABLET/DESKTOP SETTINGS*/
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1000px) {
 
     body {
         font-size: 17px;
@@ -450,6 +450,7 @@ h1 {
     .service-card p {
         display: inline;
         font-size: 20px;
+        line-height: 30px;
     }
 
     .projects-section,  #services-section {
@@ -459,14 +460,27 @@ h1 {
         column-gap: 4em;
     }
 
-    .project-card, .service-card {
+    .project-card {
         height: -webkit-fill-available;
         padding: 0;
         margin: 0;
+    }
+
+    .project-card, .service-card {
         align-items: flex-start;
         justify-content: space-between;
         text-align: left;
     }
+
+    .service-card {
+        padding: 1.5em;
+        row-gap: 1.5em;
+    }
+
+    .service-card h3{
+        margin: 0 0 1.5em 0;
+    }
+
 
     .project-card a:hover, .service-card a:hover {
         font-weight: 600;
@@ -474,10 +488,6 @@ h1 {
 
     .project-card:hover, .service-card:hover {
         box-shadow: rgb(149 157 165 / 70%) 0px 8px 24px;
-    }
-
-    .service-card {
-        padding: 1em;
     }
 
     .card-img {
@@ -490,7 +500,7 @@ h1 {
     }
 
     .project-card > *:not(:first-child) {
-        padding: 1em;
+        padding: 0em 1em 1.5em 1.5em;
     }
 
     .project-card > div:not(:first-child) > * {
@@ -499,6 +509,15 @@ h1 {
 
     .project-card > div:not(:first-child) > p {
         margin-top: 1em;
+    }
+
+    .service-card img {
+        padding: 1em;
+    }
+
+    .icon-container{
+        border-radius: 50%;
+        background-color: #ECF7FF;
     }
 
     .testimonial-emojis img:first-child {
@@ -532,7 +551,20 @@ h1 {
     }
 
     .quote-sm-profile {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
         align-items: center;
+    }
+
+    #booking-profile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #booking-profile span:first-child {
+        color: #A2D6F9;
     }
 
     #testimonial-section q{
@@ -544,6 +576,7 @@ h1 {
         flex-direction: row;
         justify-content: space-between;
         padding: 3em;
+        margin: 5em auto 3em auto;
         height: 70vh;
         background-image: url('../images/testimonial-section/orbit.png');
         background-size: cover;
@@ -570,11 +603,7 @@ h1 {
         }
     }
 
-    .service-card img {
-        background-color: bisque;
-        padding: 1em;
-        border-radius: 50%;
-    }
+    
 
     #CTA-section input[type="submit"], #CTA-section input[type="email"] {
         border: none;

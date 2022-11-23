@@ -16,7 +16,7 @@ class Navbar extends HTMLElement {
             <ul>
               <li><a href="../html/index.html">Home</a></li>
               <li><a href="../html/project.html">Projects</a></li>
-              <li><a href="../html/index.html#">Services</a></li>
+              <li><a href="../html/index.html#services-section">Services</a></li>
             </ul>
           </nav>
         </div>
