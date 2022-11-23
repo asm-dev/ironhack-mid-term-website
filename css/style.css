@@ -219,15 +219,11 @@ h1 {
     display:none;
 }
 
-#project-section > p:first-of-type {
-    display: none;
-}
-
-#project-section span {
+.project-section span {
     display:block;
 }
 
-#project-section div:first-child {
+.project-section div:first-child {
     padding-bottom: 1em;
 }
 
@@ -407,6 +403,7 @@ h1 {
         margin: 0;
         align-items: flex-start;
         justify-content: space-between;
+        text-align: left;
     }
 
     .service-card {
@@ -432,30 +429,6 @@ h1 {
 
     .project-card > div:not(:first-child) > p {
         margin-top: 1em;
-    }
-
-    /* #first-project-card {
-        background-image: url('../images/projects-section/1.jpg');
-    } */
-
-    #second-project-card {
-        background-image: url('../images/projects-section/2.jpg');
-    }
-
-    #third-project-card {
-        background-image: url('../images/projects-section/3.jpg');
-    }
-
-    #fourth-project-card {
-        background-image: url('../images/projects-section/4.jpg');
-    }
-
-    #fifth-project-card {
-        background-image: url('../images/projects-section/5.jpg');
-    }
-
-    #sixth-project-card {
-        background-image: url('../images/projects-section/6.jpg');
     }
 
     .testimonial-emojis img:first-child {
@@ -575,19 +548,22 @@ h1 {
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
 
-    #project-section > p:first-of-type {
-        display: block;
+    .project-section  p {
         padding-top: 3em;
     }
 
-    #project-section span {
+    .project-section span {
         display: inline;
     }
     
-    #project-section div:first-child {
+    .main-project-details {
         padding: 1em 0 4em 0;
         display: flex;
         justify-content: space-between;
+    }
+
+    #main-project-section {
+        padding-bottom: 0;
     }
 
     #contact-form > div:not(.message-div) {
