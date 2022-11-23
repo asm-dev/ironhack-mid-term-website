@@ -16,35 +16,33 @@ function makeProjectCard (project) {
     projectsSection.appendChild(projectCard)
 }
 
+function makeMainProject (mainProject) {
+    let projectDetails = document.createElement("div");
+    projectDetails.innerHTML = `
+        <h1>${mainProject.name}</h1>
+        <div class="main-project-details">
+            <span>${mainProject.description}</span>
+            <span><b>Completed on </b>${mainProject.completed_on}</span>
+        </div>
+        <div class="project-preview-img"></div>
+        <p>${mainProject.content}</p>`
+    let mainImage = projectDetails.querySelector(".project-preview-img")
+    mainImage.style.backgroundImage = "url('"+mainProject.image+"')"
+    projectDetails.style.display = "block";
+    projectDetails.style.padding = "0"
+    projectSection.appendChild(projectDetails)
+}
+
 window.addEventListener("load", () => {
-    
     fetch('https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects')
     .then((response) => response.json())
     .then((data) => {
-
         //Projects page
         if (projectSection !== null) {
-
             const randomUuid = Math.floor(Math.random() * data.length+1);
-            
-            let mainProject = data.filter(project => parseInt(project.uuid) === randomUuid)[0];
-
-            let projectDetails = document.createElement("div");
-            projectDetails.innerHTML = `
-                <h1>${mainProject.name}</h1>
-                <div class="main-project-details">
-                    <span>${mainProject.description}</span>
-                    <span><b>Completed on </b>${mainProject.completed_on}</span>
-                </div>
-                <div class="project-preview-img"></div>
-                <p>${mainProject.content}</p>`
-            let mainImage = projectDetails.querySelector(".project-preview-img")
-            mainImage.style.backgroundImage = "url('"+mainProject.image+"')"
-            projectDetails.style.display = "block";
-            projectDetails.style.padding = "0"
-            projectSection.appendChild(projectDetails)
-
-            let remainingProjectsArr = data.filter(project => parseInt(project.uuid) !== randomUuid)
+            const mainProject = data.filter(project => parseInt(project.uuid) === randomUuid)[0];
+            makeMainProject(mainProject)
+            const remainingProjectsArr = data.filter(project => parseInt(project.uuid) !== randomUuid)
             remainingProjectsArr.reverse().forEach((project) => {
                 makeProjectCard (project)
             });
