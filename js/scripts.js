@@ -5,3 +5,15 @@ function validateContactForm() {
         return false
     }
 }
+
+function displayMenu() {
+    let menu = document.querySelector('.nav-bar-links')
+    if (menu.classList.contains("hidden")) {
+        menu.style.display = "block"
+        menu.style.position = "absolute"
+        menu.classList.toggle("hidden")
+    } else {
+        menu.style.display = "none"
+        menu.classList.toggle("hidden")
+    }
+}

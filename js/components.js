@@ -5,14 +5,21 @@ class Navbar extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `<header class="nav-bar">
-        <img class="nav-bar-logo" src="../images/logos/circle.svg" alt="Circle logo">
-        <nav class="nav-bar-links">
-          <ul>
-            <li><a href="../html/index.html">Home</a></li>
-            <li><a href="../html/project.html">Projects</a></li>
-            <li><a href="#">Services</a></li>
-          </ul>
-        </nav>
+        <a href="../html/index.html">
+          <img class="nav-bar-logo" src="../images/logos/circle.svg" alt="Circle logo">
+        </a>
+        <div>
+          <div id="burger-menu" onclick="displayMenu()">
+            <span>Menu</span>
+          </div>
+          <nav class="nav-bar-links hidden">
+            <ul>
+              <li><a href="../html/index.html">Home</a></li>
+              <li><a href="../html/project.html">Projects</a></li>
+              <li><a href="#">Services</a></li>
+            </ul>
+          </nav>
+        </div>
         <a class="blue-button" id="nav-bar-contact" href="../html/contact.html">Contact us</a>
       </header>`
     }
