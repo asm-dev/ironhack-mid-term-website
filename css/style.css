@@ -340,7 +340,8 @@ h1 {
     }
 
     .blue-button {
-        padding: 0.8em 1.5em
+        padding: 0.8em 1.5em;
+        transition: background-color 0.2s ease-out 0s;
     }
 
     .blue-button:hover {
@@ -375,32 +376,75 @@ h1 {
 
     .hero-section-img-container {
         width: 50%;
-        height: 50vh;
+        height: 60vh;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
     }
 
-    #first-hero-card {
+     #first-hero-card {
         align-self: flex-start;
         margin: -5em auto auto -3em;
-    }
+        animation-name: firstCardMove;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+    }  
 
     #second-hero-card {
         align-self: flex-end;
-        margin: auto -4em -5em auto
+        margin: auto -4em -5em auto;
+        animation-name: secondCardMove;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes firstCardMove {
+        0% {
+            margin: -5em auto auto -3em;
+        }
+
+        50% {
+            margin: 10em auto auto -3em;
+        }
+       
+        100% {
+            margin: -5em auto auto -3em;
+        }
+    }
+
+    @keyframes secondCardMove {
+        0% {
+            margin: auto -4em -5em auto;
+        }
+
+        50% {
+            margin: -5em -4em 10em auto;
+        }
+       
+        100% {
+            margin: auto -4em -5em auto;
+        }
     }
 
     .hero-links {
         justify-content: flex-start;
     }
 
+    .hero-links a:not(:first-child):hover {
+        color: #072AC8;
+    }
+
     #client-section{
         justify-content: space-between;
     }
 
+    .client-logo {
+        transition: transform 0.3s ease 0s;
+    }
+
     .client-logo:hover {
         transform: scale(1.2);
+        filter: grayscale(0%);
     }
 
     .service-card p {
@@ -412,6 +456,7 @@ h1 {
         flex-direction: row;
         justify-content: space-between;
         height: 30vw;
+        column-gap: 4em;
     }
 
     .project-card, .service-card {
@@ -421,6 +466,14 @@ h1 {
         align-items: flex-start;
         justify-content: space-between;
         text-align: left;
+    }
+
+    .project-card a:hover, .service-card a:hover {
+        font-weight: 600;
+    }
+
+    .project-card:hover, .service-card:hover {
+        box-shadow: rgb(149 157 165 / 70%) 0px 8px 24px;
     }
 
     .service-card {
@@ -498,6 +551,23 @@ h1 {
 
     .testimonial-emojis img {
         width: 9em;
+        animation-name: rotation;
+        animation-duration: 0.8s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes rotation {
+        0% {
+            transform: rotate(5deg);
+        }
+
+        50% {
+            transform: rotate(-5deg);
+        }
+       
+        100% {
+            transform: rotate(5deg);
+        }
     }
 
     .service-card img {

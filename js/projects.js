@@ -53,16 +53,13 @@ window.addEventListener("load", () => {
     .then((data) => {
         //Projects page
         if (projectSection !== null) {
-
             const queryId = getProjectID()
-
+            //No particular product
             if (queryId === 0) {
-                
                 const randomUuid = Math.floor(Math.random() * data.length+1);
                 buildProjectPage(randomUuid, data)
-
+            //Particular product page 
             } else {
-
                 buildProjectPage(queryId, data)
             }
         // Homepage projects section
