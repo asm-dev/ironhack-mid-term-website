@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="../css/style.css" type="text/css"/>
     <script src="../js/components.js" type="text/javascript" defer></script>
+    <script src="../js/scripts.js" type="text/javascript" defer></script>
     <link rel="icon" type="image/x-icon" href="/images/logos/circle.svg">
     <title>Contact us</title>
   </head>
@@ -18,7 +19,7 @@
 
       <section class="section">
         <h1>Contact Us</h1>
-        <form id="contact-form">
+        <form id="contact-form" name="contactForm" onsubmit="return validateContactForm()">
           <label for="name" required>Full Name *</label>
           <input type="text" id="name" name="name" placeholder="Enter your full name">
           <div>
@@ -27,7 +28,7 @@
           </div>
           <div>
             <label for="phone">Phone</label>
-            <input type="number" id="phone" name="phone" placeholder="Enter your phone number">
+            <input type="number" id="phone" name="phone" minlength="9" maxlength="15" placeholder="Enter your phone number">
           </div>
           <div class="message-div">
             <label for="message">Message</label>

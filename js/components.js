@@ -58,7 +58,7 @@ class CTASection extends HTMLElement {
         <h2>Do you have any questions?</h2>
         <p>Let us help you!</p>
         <form>
-          <input type="text" placeholder="&#9993; Enter your email" name="email" id="mail">
+          <input type="email" placeholder="&#9993; Enter your email" name="email" id="mail">
           <input type="submit" value="Suscribe" class="blue-button">
         </form>
       </section>`

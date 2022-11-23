@@ -236,7 +236,7 @@ h1 {
 }
 
 #contact-form input, textarea {
-    width: 100%;
+    width: -webkit-fill-available;
     height: 3em;
     margin: 1em 0 2.5em 0;
     font-size: inherit;
