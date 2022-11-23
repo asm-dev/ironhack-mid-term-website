@@ -33,42 +33,38 @@ function makeMainProject(mainProject) {
     projectSection.appendChild(projectDetails)
 }
 
-function getQueryProject() {
-    let get = new URLSearchParams(window.location.search).get("project",10);
-    return get === null ? 0 : parseInt(get);
+function buildProjectPage(mainProjectID, data) {
+    const mainProject = data.filter(project => parseInt(project.uuid) === mainProjectID)[0];
+    makeMainProject(mainProject)
+    const remainingProjectsArr = data.filter(project => parseInt(project.uuid) !== mainProjectID)
+    remainingProjectsArr.reverse().forEach((project) => {
+        makeProjectCard (project)
+    });
+}
+
+function getProjectID() {
+    let getParams = new URLSearchParams(window.location.search).get("project",10);
+    return getParams === null ? 0 : parseInt(getParams);
 }
 
 window.addEventListener("load", () => {
     fetch('https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects')
     .then((response) => response.json())
     .then((data) => {
-        
         //Projects page
         if (projectSection !== null) {
 
-            const queryId = getQueryProject()
+            const queryId = getProjectID()
 
             if (queryId === 0) {
                 
                 const randomUuid = Math.floor(Math.random() * data.length+1);
-                const mainProject = data.filter(project => parseInt(project.uuid) === randomUuid)[0];
-                makeMainProject(mainProject)
-                const remainingProjectsArr = data.filter(project => parseInt(project.uuid) !== randomUuid)
-                remainingProjectsArr.reverse().forEach((project) => {
-                    makeProjectCard (project)
-                });
+                buildProjectPage(randomUuid, data)
 
             } else {
 
-                const uuid = queryId;
-                const mainProject = data.filter(project => parseInt(project.uuid) === uuid)[0];
-                makeMainProject(mainProject)
-                const remainingProjectsArr = data.filter(project => parseInt(project.uuid) !== uuid)
-                remainingProjectsArr.reverse().forEach((project) => {
-                    makeProjectCard (project)
-                });
-            };
-            
+                buildProjectPage(queryId, data)
+            }
         // Homepage projects section
         } else {
             for (i=3; i>0; i--) {
