@@ -1,6 +1,20 @@
 const projectSection = document.querySelector('.project-section')
 const projectsSection = document.querySelector('.projects-section')
 
+function makeProjectCard (project) {
+    let projectCard = document.createElement("div");
+    projectCard.classList.add("project-card")
+    projectCard.innerHTML = `
+        <div class="card-img"></div>
+        <div>
+            <h3>${project.name}</h3>
+            <p>${project.description}</p>
+        </div>
+        <a href="#">Learn more</a>`
+    let projectImage = projectCard.querySelector(".card-img")
+    projectImage.style.backgroundImage = "url('"+project.image+"')"
+    projectsSection.appendChild(projectCard)
+}
 
 window.addEventListener("load", () => {
     
@@ -8,9 +22,13 @@ window.addEventListener("load", () => {
     .then((response) => response.json())
     .then((data) => {
 
+        //Projects page
         if (projectSection !== null) {
+
+            const randomUuid = Math.floor(Math.random() * data.length+1);
             
-            let mainProject = data.filter(project => project.uuid === "1")[0];
+            let mainProject = data.filter(project => parseInt(project.uuid) === randomUuid)[0];
+
             let projectDetails = document.createElement("div");
             projectDetails.innerHTML = `
                 <h1>${mainProject.name}</h1>
@@ -25,23 +43,20 @@ window.addEventListener("load", () => {
             projectDetails.style.display = "block";
             projectDetails.style.padding = "0"
             projectSection.appendChild(projectDetails)
+
+            let remainingProjectsArr = data.filter(project => parseInt(project.uuid) !== randomUuid)
+            remainingProjectsArr.reverse().forEach((project) => {
+                makeProjectCard (project)
+            });
+ 
+        // Homepage projects section
+        } else {
+            for (i=3; i>0; i--) {
+                let project = data[i]
+                makeProjectCard (project)
+            }
         }
         
-        for (i=2; i>-1; i--) {
-            let project = data[i]
-            let projectCard = document.createElement("div");
-            projectCard.classList.add("project-card")
-            projectCard.innerHTML = `
-                <div class="card-img"></div>
-                <div>
-                    <h3>${project.name}</h3>
-                    <p>${project.description}</p>
-                </div>
-                <a href="#">Learn more</a>`
-            let projectImage = projectCard.querySelector(".card-img")
-            projectImage.style.backgroundImage = "url('"+project.image+"')"
-            projectsSection.appendChild(projectCard)
-        }
     })
     .catch(console.error);
 })
