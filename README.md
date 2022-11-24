@@ -37,6 +37,7 @@ Making those models helped me:
 
 - Figma
 - Miro
+- Trello
 - Google Suite
 - Slack
 - VSC
@@ -125,4 +126,4 @@ There are a few iterations that could make this project even better:
 I built this project with the advice and assistance of my IronHack mentors:
 
 - [Shaun](https://github.com/IronhackShaun)
-- [Raymon](https://github.com/RaymondMaroun)
+- [Raymond](https://github.com/RaymondMaroun)

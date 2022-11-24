@@ -1,9 +1,12 @@
-function validateContactForm() {
-    let name = document.forms["contactForm"]["name"].value;
-    if (name.toLowerCase() === "ironhack") {
-        alert("You cannot be Ironhack, because I am Ironhack.")
-        return false
-    }
+const form = document.querySelector("#contact-form")
+
+if (form !== null) {
+    form.addEventListener("submit", (event) => {
+        let name = document.forms["contactForm"]["name"].value;
+        event.preventDefault()
+        name.toLowerCase() === "ironhack" ? alert("You cannot be Ironhack, because I am Ironhack.")
+        : window.location="contact_completed.html"
+    })
 }
 
 function displayMenu() {
