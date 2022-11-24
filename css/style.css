@@ -197,6 +197,11 @@ h1 {
     display: none;
 }
 
+.testimonial-emojis img:not(:first-child){
+    width: 10em;
+    padding: 2em 0;
+}
+
 .quote-sm-profile img {
     display: none;
 }
@@ -223,6 +228,16 @@ h1 {
     color: #FFC600;
 }
 
+#booking-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#booking-profile span:first-child {
+    color: #A2D6F9;
+}
+
 .project-preview-img {
     display:none;
 }
@@ -233,6 +248,15 @@ h1 {
 
 .project-section div:first-child {
     padding-bottom: 1em;
+}
+
+.icon-container{
+    padding: 1em;
+    border-radius: 50%;
+    background-color: #ECF7FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #contact-form {
@@ -511,15 +535,6 @@ h1 {
         margin-top: 1em;
     }
 
-    .service-card img {
-        padding: 1em;
-    }
-
-    .icon-container{
-        border-radius: 50%;
-        background-color: #ECF7FF;
-    }
-
     .testimonial-emojis img:first-child {
         display: block;
     }
@@ -555,16 +570,6 @@ h1 {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-    }
-
-    #booking-profile {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    #booking-profile span:first-child {
-        color: #A2D6F9;
     }
 
     #testimonial-section q{
@@ -612,7 +617,8 @@ h1 {
 
     #CTA-section input[type="email"] {
         padding: 1.5em 1em;
-        width: 20em;
+        width: 25em;
+        margin-right: 0.5em;
     }
 
     #CTA-section input[type="submit"] {
@@ -640,7 +646,7 @@ h1 {
     }
 
     .footer nav {
-        width: 40%;
+        width: 35%;
     }
 
     .footer ul {
@@ -648,7 +654,8 @@ h1 {
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
-        gap: 3em;
+        row-gap: 2em;
+        column-gap: 4em;
         justify-content:flex-start;
     }
 
@@ -683,7 +690,7 @@ h1 {
     }
 
     #contact-form > div:not(.message-div) {
-        width: 45%;
+        width: 49%;
     }
 
     .message-div {
@@ -703,5 +710,10 @@ h1 {
 
     #contact-form textarea {
         width: -webkit-fill-available;
+    }
+
+    #cta-submit-btn:hover {
+        background-color: #041f97;
+        color: white;
     }
 }

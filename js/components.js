@@ -41,10 +41,12 @@ class Footer extends HTMLElement {
       <nav>
         <ul>
           <li><a href="#">Team</a></li>
-          <li><a href="#">Services</a></li>
+          <li><a href="../html/index.html#services-section">Services</a></li>
           <li><a href="#">About Us</a></li>
+        </ul>
+        <ul>
           <li><a href="#">Press</a></li>
-          <li><a href="#">Projects</a></li>
+          <li><a href="../html/project.html">Projects</a></li>
           <li><a href="#">Privacy Policy</a></li>
         </ul>
       </nav>
@@ -66,7 +68,7 @@ class CTASection extends HTMLElement {
         <p>Let us help you!</p>
         <form>
           <input type="email" required placeholder="&#9993; Enter your email" name="email" id="mail">
-          <input type="submit" value="Suscribe" class="blue-button">
+          <input type="submit" value="Suscribe" class="blue-button" id="cta-submit-btn">
         </form>
       </section>`
   }
