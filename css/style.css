@@ -745,10 +745,19 @@ h1 {
         background-color: #041f97;
         color: white;
     }
+
+    #contact-completed {
+        margin-top: 10em;
+        margin-bottom: 10em;
+    }
 }
 
 @media only screen and (min-width: 1800px) {
     body {
         margin: 0 15vw;
+    }
+
+    .hero-section-img-container {
+        height: 35em;
     }
 }
