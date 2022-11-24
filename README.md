@@ -3,7 +3,6 @@
 I built and deployed a fully responsive website usign HTML, CSS and Vanilla JavaScript. I followed a mobile first approach and some agile methodologies. From beginning to end, the project took approximately 35h.
 
 <br>
-<br>
 <p align="center">
   <img src="/images/readme/homepage.gif"/>
 </p>
@@ -65,36 +64,40 @@ The data we fetch is also used in the homepage to load the most recent projects 
 ## Demo
 
 **Mobile first responsive design**
+<br>
+<br>
 
-<br>
-<br>
 <p align="center">
   <img src="/images/readme/mobile-preview.gif"/>
 </p>
+<br>
 
 **Data fetching from API**
+<br>
+<br>
 
-<br>
-<br>
 <p align="center">
   <img src="/images/readme/projects-behaviour.gif"/>
 </p>
+<br>
 
 **Interactiveness**
+<br>
+<br>
 
-<br>
-<br>
 <p align="center">
   <img src="/images/readme/interactiveness.gif"/>
 </p>
+<br>
 
 **Contact form validation**
+<br>
+<br>
 
-<br>
-<br>
 <p align="center">
   <img src="/images/readme/form-validation.gif"/>
 </p>
+<br>
 
 ## Project link
 
@@ -104,7 +107,8 @@ The deployed page can be checked out [here](https://circle-mockup.netlify.app/ht
 
 There are a few iterations that could make this project even better:
 
-- Polish media queries to ensure the best experience for 4k monitors.
+- Polish media queries to ensure the best experience for 4k monitors
+- Reduce images size to achieve faster loading
 - Increase the site's accesibility features
 - Provide a 404 page to improve error handling
 - Polish contact forms behaviour, adding more validations and feedback
@@ -114,11 +118,11 @@ There are a few iterations that could make this project even better:
 
 ## Resources
 
-- (A Complete Guide to Flexbox)[https://css-tricks.com/snippets/css/a-guide-to-flexbox/]
+- [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 ## Team members
 
 I built this project with the advice and assistance of my IronHack mentors:
 
-- [Shaun]("https://github.com/IronhackShaun")
-- [Raymon]("https://github.com/RaymondMaroun")
+- [Shaun](https://github.com/IronhackShaun)
+- [Raymon](https://github.com/RaymondMaroun)
