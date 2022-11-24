@@ -2,7 +2,11 @@
 
 I built and deployed a fully responsive website usign HTML, CSS and Vanilla JavaScript. I followed a mobile first approach and some agile methodologies. From beginning to end, the project took approximately 35h.
 
-![Site preview](/images/readme/homepage.gif)
+<br>
+<br>
+<p align="center">
+  <img src="/images/readme/homepage.gif"/>
+</p>
 
 ## Wireframes
 
@@ -44,7 +48,7 @@ This website has a homepage, a contact page and a projects page. Additionaly, th
 
 By using JavaScript, the shared components accross site or between pages can be used as HTML elements. These are top nav, footer and CTA section, and can be found on the _components.js file_.
 
-Regarding the pages' structure it's worth mentioning that this website does some **data fetching from an external API**. This allows us to retrieve data for each project when clicking on the projects cards and create the relevant page thanks to some DOM manipulation.
+Regarding the pages' structure it's worth mentioning that this website does some **data fetching from an external API**. This allows us to retrieve data for each project from this [endpoint](https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects) when clicking on the projects cards and create the relevant page thanks to some DOM manipulation.
 
 The data we fetch is also used in the homepage to load the most recent projects cards from the API, and to provide a random project to the user when they click projects in the top navigation bar.
 
@@ -60,13 +64,37 @@ The data we fetch is also used in the homepage to load the most recent projects 
 
 ## Demo
 
-**Mobile**
+**Mobile first responsive design**
 
-Images
+<br>
+<br>
+<p align="center">
+  <img src="/images/readme/mobile-preview.gif"/>
+</p>
 
-**Desktop**
+**Data fetching from API**
 
-Images
+<br>
+<br>
+<p align="center">
+  <img src="/images/readme/projects-behaviour.gif"/>
+</p>
+
+**Interactiveness**
+
+<br>
+<br>
+<p align="center">
+  <img src="/images/readme/interactiveness.gif"/>
+</p>
+
+**Contact form validation**
+
+<br>
+<br>
+<p align="center">
+  <img src="/images/readme/form-validation.gif"/>
+</p>
 
 ## Project link
 
@@ -86,4 +114,11 @@ There are a few iterations that could make this project even better:
 
 ## Resources
 
+- (A Complete Guide to Flexbox)[https://css-tricks.com/snippets/css/a-guide-to-flexbox/]
+
 ## Team members
+
+I built this project with the advice and assistance of my IronHack mentors:
+
+- [Shaun]("https://github.com/IronhackShaun")
+- [Raymon]("https://github.com/RaymondMaroun")
