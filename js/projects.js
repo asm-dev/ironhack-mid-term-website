@@ -56,7 +56,7 @@ window.addEventListener("load", () => {
             const queryId = getProjectID()
             //No particular product
             if (queryId === 0) {
-                const randomUuid = Math.floor(Math.random() * data.length+1);
+                const randomUuid = Math.floor(Math.random() * 4);
                 buildProjectPage(randomUuid, data)
             //Particular product page 
             } else {
