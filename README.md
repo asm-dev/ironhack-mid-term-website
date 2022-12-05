@@ -116,6 +116,10 @@ There are a few iterations that could make this project even better:
 - Testing
 - Review HTML to see if more semantic tags could be used
 - Create a loading page
+- Improve error handling
+- Secure form
+- Add a loading spinner
+- Ensure there's no page flickering
 
 ## Resources
 
